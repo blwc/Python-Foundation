@@ -1,0 +1,18 @@
+- jupyter notebook via anaconda
+- localhost -> nav to repo -> in note
+
+- control flow
+my_age = 0
+my_name = 'Bridie'
+if my_name != 'Bridie':
+    print('You are not Bridie')
+    if my_age % 10 == 0:
+        print("But it's a big year for you eh?")
+    else:
+        print(str(my_age) + " isn't a big deal.")
+
+PATH=$(REMOVE_PART="/Users/wilhite/anaconda/bin" sh -c 'echo ":$PATH:" | sed "s@:$REMOVE_PART:@:@g;s@^:\(.*\):\$@\1@"')
+
+echo $PATH | tr ':' '\n'
+
+export PATH=`echo ${PATH} | awk -v RS=: -v ORS=: '/anaconda/ {next} {print}'`
