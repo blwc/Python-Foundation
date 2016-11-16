@@ -45,11 +45,11 @@ if __name__ == '__main__':
     try:
         NUMBER = int(input('Enter a positive integer: '))
     except:
-        print("Please enter a positive integer.")
+        print("Really, now, thought you'd be contrary, huh?")
     if NUMBER < 1 :
-        print('Sorry, please try a positive integer.')
+        print('Are you sure thats a positive integer??')
     elif NUMBER > 100000:
         print('Now, lets not be too hasty, try a smaller number.')
     else:
         romanize()
-        print('The roman numeral of your number is: ' + ROMAN)
+        print('The Roman numeral of your number is: ' + ROMAN)
