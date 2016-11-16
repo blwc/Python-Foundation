@@ -1,8 +1,14 @@
-###Guess the number. If guess is too high, reply too high, etc
-###import imports a module
-###random source code is at: https://hg.python.org/cpython/file/2.7/Lib/random.py
-###random implements a pseudo-random number generator
+"""
+A collection of basic practice problems.
+"""
+
 def guess_the_number():
+    """
+    Guess the number. If guess is too high, reply too high, etc
+    import imports a module
+    random source code is at: https://hg.python.org/cpython/file/2.7/Lib/random.py
+    random implements a pseudo-random number generator
+    """
     import random
     #initialize the variable guess
     guess = -1
@@ -21,11 +27,16 @@ def guess_the_number():
             guess = int(input())
             print('You got it!')
 
-#Collatz conjecture
-#     If the number is even, divide it by two.
-#     If the number is odd, triple it and add one.
-#     This process will always end in the number 1
+
 def collatz(i):
+    """
+    Collatz conjecture
+        If the number is even, divide it by two.
+        If the number is odd, triple it and add one.
+        This process will always end in the number 1
+    This function will print the sequence of numbers from the input to 1, the
+    number of operations and will return the number of operations.
+    """
     number = i
     count = 0
     seq = str(i)
@@ -40,8 +51,14 @@ def collatz(i):
     print('It took ' + str(count) + ' operations to get ' + str(i) + ' to 1.')
     return count
 
-#leap_year to chinese zodiac year???
-
+def collatz_counts(h, t):
+    """
+    takes a range of numbers and returns a list of tuples of the integers and
+    the collatz operation counts for each
+    """
+    r = range(h, t+1)
+    c = [collatz(i) for i in range(h, t+1)]
+    return list(zip(r, c))
 
 # FizzBuzz
 #
@@ -65,13 +82,18 @@ def FizzBuzz(i, j):
         if k%3 and k%5:
             print(str(k), end=' ')
 
-#     Write a loop that sings 99 Bottles of Beer on the wall. Last line is 'No more bottles of beer on the wall'
-#     Write another loop that does FizzBuzz for the numbers 1 to 100.
 #     Print out the letters of the alphabet along with their index (a is 1, b is 2, c is 3)
-#     Write a loop that prompts the user to enter a password twice. If both passwords are the same it prints "Access Granted" otherwise it reprompts them to enter their password again twice.
-#
-# Bonus:
-#
+
+def lower_alpha_to_int(s):
+    return ord(s.lower())-96
+
 #     Write a program that takes a word (or any input) and calculates the word value according the the alphabet index created above (i.e. cat == 3 + 1 + 20 == 24)
+
+def string_to_int(s):
+    sum = 0
+    for j in [ord(i.lower())-96 for i in s]:
+        sum += j
+    return sum
+
+
 #     What if the word has uppercase letters? Account for those in your next solution.
-#     List the amount of steps the Collatz procedure takes (until it reaches 1) for every number from 1 to 10.
