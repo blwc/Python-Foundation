@@ -1,0 +1,22 @@
+print('foo', 'bar', 'baz', sep=', ')
+
+
+def make_adder():
+  def addx(y):
+    return x + y
+  return addx
+
+add5 = make_adder(5)
+>>>add5(3)
+8
+
+add_one = lambda x: x + 1
+
+fed do_twice(func):
+  func()
+  func()
+
+parentheses are invocation
+
+lambda <3
+max(some_collection, key=lambda x:x.count('a'))

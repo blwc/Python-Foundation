@@ -1,0 +1,11 @@
+example = {'a' : 'b'}
+>>>example['a']
+'b'
+
+access dictionary through keys
+dictionaries are useable as look upable things (morse code)
+
+if 'c' not in example:
+  example['c'] = 'd'
+>>>example['c']
+'d'

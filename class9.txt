@@ -1,0 +1,52 @@
+>>>a = [1, 1, 2, 2, 1, ]
+>>>a_set = set(a)
+{1, 2}
+>>>b = {'a':1, 'b':2, 'c':3}
+>>>b_set = set(b)
+{'a', 'b', 'c'}
+
+no return on mutation methods
+
+>>> d = {'a' : 1, 'b' : 2, 'c':3}
+>>> ds = set(d)
+>>> ds.clear()
+>>> ds
+set()
+>>> ds = set(d)
+>>> ds
+{'a', 'c', 'b'}
+>>> ds.remove('b')
+>>> ds
+{'a', 'c'}
+>>> ds.remove('b')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'b'
+>>> ds
+{'a', 'c'}
+>>> ds.add('b')
+>>> ds.discard('b')
+>>> ds
+{'a', 'c'}
+>>> ds.discard('b')
+>>> ds
+{'a', 'c'}
+
+
+>>> ds
+{'a', 'd', 'c', 'g', 'b'}
+>>> ds.pop()
+'a'
+>>> ds
+{'d', 'c', 'g', 'b'}
+
+
+>>> ls
+{'a', 's', 'r', 'f'}
+>>> ds
+{'a', 'c', 'b'}
+>>> ls.intersection(ds)
+{'a'}
+>>> ls.union(ds)
+{'a', 's', 'b', 'r', 'c', 'f'}
+>>>
