@@ -5,6 +5,17 @@
 >>>b_set = set(b)
 {'a', 'b', 'c'}
 
+
+
+#x = range(10)
+#(str(i)+'s') for i in x
+
+# Here's our collatz:
+#[i//2 if even(i) else i*3+1 for i in x]
+
+
+
+
 no return on mutation methods
 
 >>> d = {'a' : 1, 'b' : 2, 'c':3}
