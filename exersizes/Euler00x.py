@@ -38,7 +38,7 @@ def eratosthenes_sieve(limit):
             while ((i*i + j*i) < int(math.sqrt(limit)) ):
                 A[i*i + j*i ] = False
                 j += 1
-    return A[:int(math.sqrt(limit))]
+    return A[:int(math.sqrt(limit)+1)]
 
 def not_prime_factors(x):
     factors = []
